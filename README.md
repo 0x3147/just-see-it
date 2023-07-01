@@ -1,46 +1,22 @@
-# just-see-it
+## ✨ 基于Vue3的直播视频平台
 
-This template should help get you started developing with Vue 3 in Vite.
+### 📝 项目介绍
 
-## Recommended IDE Setup
+- 本项目是基于`Vue3`的视频网站，主体逻辑参考极客时间 Barry 老师的课程 [课程链接](https://time.geekbang.org/column/intro/100546501?tab=catalog) 👍
+- 由于课程是基于`Vue2`的，所以本项目是基于Vue3的重构版本，且使用 `typescript` 进行开发
+- UI框架改用 `naive-ui`，使用 `vite` 进行项目构建
+- 状态管理库由 `vuex` 改为 `pinia`，`pinia`更适合 `Vue3` + `typescript` 
+- 项目已使用 `eslint` + `prettier` 进行代码规范管理
+- 项目已使用 MIT 协议开源，更多功能仍在开发中，欢迎此课程的同学一起学习交流，有问题欢迎提交issues 😁
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+### 📦 安装
 
-## Type Support for `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
-
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
-
-1. Disable the built-in TypeScript Extension
-    1) Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-    2) Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
+```shell
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+### 🚀 运行
 
-```sh
+```shell
 npm run dev
-```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
 ```
