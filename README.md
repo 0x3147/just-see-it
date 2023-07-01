@@ -9,13 +9,13 @@
 - 项目已使用 `eslint` + `prettier` 进行代码规范管理
 - 项目已使用 MIT 协议开源，更多功能仍在开发中，欢迎此课程的同学一起学习交流，有问题欢迎提交issues 😁
 
-### 📦 安装
+### 📦 依赖安装
 
 ```shell
 npm install
 ```
 
-### 🚀 运行
+### 🚀 项目运行
 
 ```shell
 npm run dev
