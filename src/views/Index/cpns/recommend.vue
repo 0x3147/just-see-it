@@ -2,6 +2,7 @@
 import { reactive } from 'vue'
 import router from '@/router'
 import { Flame, ReloadOutline, ChevronForwardOutline, PlayCircleOutline } from '@vicons/ionicons5'
+import AreaTopBar from '@/components/AreaTopBar/areaTopBar.vue'
 
 interface IList {
   id: string
@@ -100,28 +101,7 @@ const goDetail = (id: string) => {
 </script>
 
 <template>
-  <div class="recommend-title">
-    <n-space justify="space-between" align="center">
-      <n-space>
-        <n-icon :component="Flame" size="20" />
-        <span>特别推荐</span>
-      </n-space>
-      <n-space>
-        <n-button size="tiny" @click="handleReload">
-          换一换
-          <template #icon>
-            <n-icon :component="ReloadOutline" />
-          </template>
-        </n-button>
-        <n-button size="tiny" icon-placement="right" @click="goList">
-          更多
-          <template #icon>
-            <n-icon :component="ChevronForwardOutline" />
-          </template>
-        </n-button>
-      </n-space>
-    </n-space>
-  </div>
+  <AreaTopBar bar-title="热门推荐" is-bar-broad :handle-reload="handleReload" :go-list="goList" />
   <div class="recommend">
     <div class="recommend-left">
       <img :src="main_recommend.img" alt="" @click="goDetail(main_recommend.id)" />

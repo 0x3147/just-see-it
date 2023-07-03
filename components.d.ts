@@ -9,6 +9,7 @@ declare module 'vue' {
   export interface GlobalComponents {
     AppFooter: typeof import('./src/components/AppFooter.vue')['default']
     AppHeader: typeof import('./src/components/AppHeader/appHeader.vue')['default']
+    AreaTopBar: typeof import('./src/components/AreaTopBar/areaTopBar.vue')['default']
     HeaderNav: typeof import('./src/components/AppHeader/cpns/header-nav.vue')['default']
     HeaderUserInfo: typeof import('./src/components/AppHeader/cpns/header-user-info.vue')['default']
     Logo: typeof import('./src/components/AppHeader/cpns/logo.vue')['default']
