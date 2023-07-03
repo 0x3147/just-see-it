@@ -1,23 +1,35 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { reactive } from 'vue'
+
+const carouselList = reactive([
+  {
+    id: '1',
+    img: 'https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel1.jpeg'
+  },
+  {
+    id: '2',
+    img: 'https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel2.jpeg'
+  },
+  {
+    id: '3',
+    img: 'https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel3.jpeg'
+  },
+  {
+    id: '4',
+    img: 'https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel4.jpeg'
+  }
+])
+</script>
 
 <template>
   <div class="carousel">
-    <n-carousel autoplay dot-type="line">
+    <n-carousel autoplay dot-type="line" show-arrow>
       <img
         class="carousel-img"
-        src="https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel1.jpeg"
-      />
-      <img
-        class="carousel-img"
-        src="https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel2.jpeg"
-      />
-      <img
-        class="carousel-img"
-        src="https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel3.jpeg"
-      />
-      <img
-        class="carousel-img"
-        src="https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel4.jpeg"
+        v-for="item in carouselList"
+        :key="item.id"
+        :src="item.img"
+        alt=""
       />
     </n-carousel>
   </div>

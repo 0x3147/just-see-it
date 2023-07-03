@@ -18,6 +18,6 @@ defineOptions({ name: 'basicLayout' })
 <style lang="scss" scoped>
 .content {
   min-height: calc(100vh - 140px);
-  background: #fff;
+  background: #f1f1f1;
 }
 </style>

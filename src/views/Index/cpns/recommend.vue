@@ -132,7 +132,7 @@ const goDetail = (id: string) => {
 
 <style scoped lang="scss">
 .top-bar-icon {
-  color: yellow;
+  color: #ffcc33;
 }
 
 .recommend {

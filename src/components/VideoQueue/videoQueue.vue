@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import type { PropType } from 'vue'
-import { ColorWandOutline } from '@vicons/ionicons5'
+import { ColorWandOutline, Play, ThumbsUpSharp } from '@vicons/ionicons5'
 import router from '@/router'
+import { formatSeconds } from '@/utils/time-format'
 
 interface IList {
   id: string
@@ -32,12 +33,28 @@ const goDetail = (id: string) => {
   <div class="video-list-content">
     <div class="video-list-content-item" v-for="item in videoList" :key="item.id">
       <img :src="item.img" alt="" @click="goDetail(item.id)" />
+      <div class="video-info">
+        <n-space justify="space-around" align="center">
+          <n-space>
+            <n-icon class="icon-style" :component="Play" size="15" />
+            <span class="info-font">{{ item.play_times }}</span>
+          </n-space>
+          <n-space>
+            <n-icon class="icon-style" :component="ThumbsUpSharp" size="15" />
+            <span class="info-font">{{ item.good }}</span>
+          </n-space>
+          <span class="info-font">{{ formatSeconds(item.duration) }}</span>
+        </n-space>
+      </div>
       <div class="video-list-content-item-detail">
         <p class="video-list-content-desc">{{ item.name }}</p>
         <n-space align="center">
           <n-icon class="video-list-content-author" :component="ColorWandOutline" />
           <p class="video-list-content-author">{{ item.author.name }}</p>
         </n-space>
+      </div>
+      <div class="cover" @click="goDetail(item.id)">
+        <n-icon :component="Play" size="24" />
       </div>
     </div>
   </div>
@@ -53,6 +70,7 @@ const goDetail = (id: string) => {
   row-gap: 10px;
 
   .video-list-content-item {
+    position: relative;
     display: flex;
     flex-direction: column;
     width: 206px;
@@ -80,6 +98,52 @@ const goDetail = (id: string) => {
       width: 100%;
       height: 150px;
     }
+
+    .video-info {
+      width: 100%;
+      position: absolute;
+      bottom: 80px;
+
+      .info-font {
+        font-size: 12px;
+        line-height: 14px;
+        color: #fff;
+      }
+    }
+
+    .cover {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      left: 0;
+      color: #fff;
+      right: 0;
+      top: 0;
+      opacity: 0;
+      width: 100%;
+      height: 150px;
+      position: absolute;
+      transition: all 0.2s linear;
+      background-color: rgba(0, 0, 0, 0.6);
+      font-size: 12px;
+      cursor: pointer;
+    }
+
+    &:hover {
+      .cover {
+        opacity: 1;
+        bottom: 0;
+      }
+
+      .video-info {
+        display: none;
+      }
+    }
+  }
+
+  .icon-style {
+    color: #fff;
   }
 }
 </style>
