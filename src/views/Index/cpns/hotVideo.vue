@@ -142,7 +142,6 @@ const goList = () => {
   // TODO
 }
 
-
 const loadMoreRanking = () => {
   console.log('加载更多')
 }
