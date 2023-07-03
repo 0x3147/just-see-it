@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { reactive } from 'vue'
 import router from '@/router'
-import { Flame, ReloadOutline, ChevronForwardOutline, PlayCircleOutline } from '@vicons/ionicons5'
+import { PlayCircleOutline, Star } from '@vicons/ionicons5'
 import AreaTopBar from '@/components/AreaTopBar/areaTopBar.vue'
 
 interface IList {
@@ -101,7 +101,11 @@ const goDetail = (id: string) => {
 </script>
 
 <template>
-  <AreaTopBar bar-title="热门推荐" is-bar-broad :handle-reload="handleReload" :go-list="goList" />
+  <AreaTopBar bar-title="热门推荐" is-bar-broad :handle-reload="handleReload" :go-list="goList">
+    <template #iconSet>
+      <n-icon class="top-bar-icon" :component="Star" size="24" />
+    </template>
+  </AreaTopBar>
   <div class="recommend">
     <div class="recommend-left">
       <img :src="main_recommend.img" alt="" @click="goDetail(main_recommend.id)" />
@@ -127,9 +131,8 @@ const goDetail = (id: string) => {
 </template>
 
 <style scoped lang="scss">
-.recommend-title {
-  margin-top: 15px;
-  width: 1170px;
+.top-bar-icon {
+  color: yellow;
 }
 
 .recommend {

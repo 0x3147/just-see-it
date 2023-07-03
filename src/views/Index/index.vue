@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import Carousel from '@/views/Index/cpns/carousel.vue'
 import Recommend from '@/views/Index/cpns/recommend.vue'
+import HotVideo from '@/views/Index/cpns/hotVideo.vue'
 </script>
 
 <template>
@@ -8,7 +9,7 @@ import Recommend from '@/views/Index/cpns/recommend.vue'
     <div class="index-container">
       <Carousel />
       <Recommend />
-      <div>热点与排行榜</div>
+      <HotVideo />
       <div>游戏和热门推荐</div>
     </div>
   </div>

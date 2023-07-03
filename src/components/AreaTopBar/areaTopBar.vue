@@ -20,7 +20,7 @@ withDefaults(defineProps<IProps>(), {
   <div :class="isBarBroad ? 'lg-top-bar' : 'sm-top-bar'">
     <n-space justify="space-between" align="center">
       <n-space>
-        <n-icon :component="Flame" size="20" />
+        <slot name="iconSet" />
         <span>{{ barTitle }}</span>
       </n-space>
       <n-space>
@@ -50,5 +50,9 @@ withDefaults(defineProps<IProps>(), {
 .sm-top-bar {
   margin-top: 15px;
   width: 840px;
+}
+
+.top-bar-icon {
+  color: red;
 }
 </style>

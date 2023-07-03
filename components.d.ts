@@ -23,7 +23,10 @@ declare module 'vue' {
     NInput: typeof import('naive-ui')['NInput']
     NP: typeof import('naive-ui')['NP']
     NSpace: typeof import('naive-ui')['NSpace']
+    RightAreaTopBar: typeof import('./src/components/AreaTopBar/rightAreaTopBar.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    VideoList: typeof import('./src/components/VideoQueue/videoList.vue')['default']
+    VideoQueue: typeof import('./src/components/videoQueue/videoQueue.vue')['default']
   }
 }
