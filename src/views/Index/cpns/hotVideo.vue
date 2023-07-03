@@ -142,15 +142,6 @@ const goList = () => {
   // TODO
 }
 
-/**
- * @desc 跳转视频详情页
- * @Author bk0x114
- * @Date 2023-07-01 16:56:03
- * @param id 视频id
- */
-const goDetail = (id: string) => {
-  router.push('/video/detail/' + id)
-}
 
 const loadMoreRanking = () => {
   console.log('加载更多')
