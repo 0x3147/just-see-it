@@ -25,6 +25,8 @@ declare module 'vue' {
     NInput: typeof import('naive-ui')['NInput']
     NP: typeof import('naive-ui')['NP']
     NSpace: typeof import('naive-ui')['NSpace']
+    NTabPane: typeof import('naive-ui')['NTabPane']
+    NTabs: typeof import('naive-ui')['NTabs']
     RightAreaTopBar: typeof import('./src/components/AreaTopBar/rightAreaTopBar.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']

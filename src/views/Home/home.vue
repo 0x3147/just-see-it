@@ -1,12 +1,13 @@
 <script setup lang="ts">
 import HomeUpper from './homeUpper.vue'
+import HomeBelow from './homeBelow.vue'
 </script>
 
 <template>
   <div class="home">
     <div class="home-container">
       <HomeUpper />
-      <div>用户相关点赞区域</div>
+      <HomeBelow />
     </div>
   </div>
 </template>
