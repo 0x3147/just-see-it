@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import Carousel from '@/views/Index/cpns/carousel.vue'
-import Recommend from '@/views/Index/cpns/recommend.vue'
-import HotVideo from '@/views/Index/cpns/hotVideo.vue'
-import GameRecommend from '@/views/Index/cpns/gameRecommend.vue'
-import SideNav from '@/views/Index/cpns/sideNav.vue'
+import Carousel from './cpns/carousel.vue'
+import Recommend from './cpns/recommend.vue'
+import HotVideo from './cpns/hotVideo.vue'
+import GameRecommend from './cpns/gameRecommend.vue'
+import SideNav from './cpns/sideNav.vue'
 
 const containerRef = ref<HTMLElement | undefined>(undefined)
 </script>
